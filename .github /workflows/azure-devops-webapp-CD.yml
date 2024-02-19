@@ -43,12 +43,12 @@ jobs:
           name: trained-model
           path: model.joblib
 
-    #  - name: Upload artifact for deployment jobs
-    #   uses: actions/upload-artifact@v3
-    #    with:
-    #      name: python-app
-    #      path: |
-    #        release.zip
-     #       !venv/
+      - name: Upload artifact for deployment jobs
+        uses: actions/upload-artifact@v3
+        with:
+          name: trained-model
+          path: model.joblib
+          #  release.zip
+          #  !venv/
 
  
