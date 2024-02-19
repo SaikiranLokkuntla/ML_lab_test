@@ -58,6 +58,12 @@ jobs:
       - name: Unzip artifact for deployment
         run: unzip release.zip
 
+      - name: Upload trained model
+        uses: actions/upload-artifact@v2
+        with:
+          name: trained-model
+          path: model.joblib
+
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
