@@ -57,7 +57,10 @@ jobs:
 
       - name: Unzip artifact for deployment
         run: unzip release.zip
-
+        
+      - name: Train model
+        run: python app.py
+        
       - name: Upload trained model
         uses: actions/upload-artifact@v2
         with:
